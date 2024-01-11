@@ -83,7 +83,7 @@ describe('BookSevice', () => {
     expect(service).toBeTruthy();
   });
 
-  it('getBook return a list of book and doesa get method', () => {
+  it('getBook return a list of book and does a get method', () => {
 
     service.getBooks().subscribe((resp: Book[]) => {
       expect(resp).toEqual(listBook);
