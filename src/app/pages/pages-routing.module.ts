@@ -2,25 +2,30 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
+import { FormComponent } from './form/form.component';
 
 
 export const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'cart',
-    component: CartComponent
+    component: CartComponent,
+  },
+  {
+    path: 'form',
+    component: FormComponent,
   },
   {
     path: '',
     redirectTo: '/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   { path: '**',
     redirectTo: '/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
 ];
 
