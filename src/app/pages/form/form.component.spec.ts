@@ -30,26 +30,26 @@ describe('Form component', () => {
     it('should create', () => {
         expect(component).toBeTruthy()
     })
-    
-    it('name fild is required', () => {
+
+    it('name field is required', () => {
         const nameField = component.form.get('name')
         nameField.setValue('')
         expect(nameField.valid).toBeFalse()
     })
 
-    it('name fild has an error with more than 5 characters', () => {
+    it('name field has an error with more than 5 characters', () => {
         const nameField = component.form.get('name')
         nameField.setValue('test name')
         expect(nameField.valid).toBeFalse()
     })
-    
-    it('name fild is correct with less than 5 characters', () => {
+
+    it('name field is correct with less than 5 characters', () => {
         const nameField = component.form.get('name')
         nameField.setValue('Jack')
         expect(nameField.valid).toBeTrue()
     })
 
-    it('email fild is required', () => {
+    it('email field is required', () => {
         const emailField = component.form.get('email')
         emailField.setValue('')
         expect(emailField.valid).toBeFalse()
@@ -70,5 +70,5 @@ describe('Form component', () => {
         emailField.setValue('test@test.com')
         expect(component.form.valid).toBeTrue()
     })
-    
+
 })

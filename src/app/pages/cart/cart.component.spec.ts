@@ -200,7 +200,6 @@ describe('Cart component', () => {
       const element: HTMLElement = debugElement.nativeElement;
       expect(element.innerHTML).toContain("The cart is empty");
     }
-
   });
 
 });
